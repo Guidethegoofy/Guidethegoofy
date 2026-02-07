@@ -1,7 +1,10 @@
 name: Minesweeper Game
 
 on:
-  # Allow manual trigger with cell input
+  # Trigger when issue is opened with specific label
+  issues:
+    types: [opened]
+  # Keep manual trigger as backup
   workflow_dispatch:
     inputs:
       cell:
@@ -20,11 +23,14 @@ on:
 
 permissions:
   contents: write
+  issues: write
 
 jobs:
   play:
     runs-on: ubuntu-latest
     timeout-minutes: 5
+    # Only run if issue title starts with "minesweeper|" or manual trigger
+    if: github.event_name == 'workflow_dispatch' || startsWith(github.event.issue.title, 'minesweeper|')
 
     steps:
       - name: Checkout repository
@@ -37,7 +43,30 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Run Minesweeper
+      - name: Parse Issue Title
+        if: github.event_name == 'issues'
+        id: parse
+        run: |
+          TITLE="${{ github.event.issue.title }}"
+          # Format: minesweeper|action|cell (e.g., minesweeper|reveal|A1)
+          ACTION=$(echo "$TITLE" | cut -d'|' -f2)
+          CELL=$(echo "$TITLE" | cut -d'|' -f3)
+          echo "action=$ACTION" >> $GITHUB_OUTPUT
+          echo "cell=$CELL" >> $GITHUB_OUTPUT
+
+      - name: Run Minesweeper (from Issue)
+        if: github.event_name == 'issues'
+        run: |
+          ACTION="${{ steps.parse.outputs.action }}"
+          CELL="${{ steps.parse.outputs.cell }}"
+          if [ "$ACTION" == "new" ]; then
+            python scripts/minesweeper.py new
+          else
+            python scripts/minesweeper.py "$ACTION" "$CELL"
+          fi
+
+      - name: Run Minesweeper (Manual)
+        if: github.event_name == 'workflow_dispatch'
         run: |
           if [ "${{ github.event.inputs.action }}" == "new" ]; then
             python scripts/minesweeper.py new
@@ -53,5 +82,23 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "Minesweeper Bot"
           git add game_state.json minesweeper.svg MINESWEEPER.md README.md
-          git diff --staged --quiet || git commit -m "Minesweeper: ${{ github.event.inputs.action }} ${{ github.event.inputs.cell }}"
+          git diff --staged --quiet || git commit -m "Minesweeper: play move"
           git push
+
+      - name: Close Issue
+        if: github.event_name == 'issues'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              state: 'closed'
+            });
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: '✅ Move processed! Check the [README](https://github.com/${{ github.repository }}) for the updated board.'
+            });

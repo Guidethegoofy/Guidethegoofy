@@ -234,7 +234,9 @@ def generate_svg(state):
     return '\n'.join(svg_parts)
 
 def generate_readme_section(state, repo_owner="Guidethegoofy", repo_name="Guidethegoofy"):
-    """Generate markdown section for README with clickable links"""
+    """Generate markdown section for README with clickable issue links"""
+    import urllib.parse
+    
     lines = []
     lines.append('<div align="center">')
     lines.append('')
@@ -244,16 +246,21 @@ def generate_readme_section(state, repo_owner="Guidethegoofy", repo_name="Guidet
     lines.append('')
     
     if state['game_over']:
-        lines.append('**💥 Game Over!** Click "New Game" to play again.')
+        # New game link
+        new_game_title = "minesweeper|new|game"
+        new_game_url = f"https://github.com/{repo_owner}/{repo_name}/issues/new?title={urllib.parse.quote(new_game_title)}&body=Click+Submit+to+start+a+new+game!"
+        lines.append(f'**💥 Game Over!** [🔄 New Game]({new_game_url})')
         lines.append('')
     elif state['won']:
-        lines.append('**🎉 Congratulations! You won!** Click "New Game" to play again.')
+        new_game_title = "minesweeper|new|game"
+        new_game_url = f"https://github.com/{repo_owner}/{repo_name}/issues/new?title={urllib.parse.quote(new_game_title)}&body=Click+Submit+to+start+a+new+game!"
+        lines.append(f'**🎉 You Won!** [🔄 Play Again]({new_game_url})')
         lines.append('')
     else:
-        lines.append('**Click a cell coordinate below to reveal it!**')
+        lines.append('**👆 Click a cell to reveal it!**')
         lines.append('')
     
-    # Generate clickable grid
+    # Generate clickable grid with issue links
     lines.append('|   | ' + ' | '.join([chr(65 + c) for c in range(state['board_size'])]) + ' |')
     lines.append('|---' + '|---' * state['board_size'] + '|')
     
@@ -270,17 +277,27 @@ def generate_readme_section(state, repo_owner="Guidethegoofy", repo_name="Guidet
                 else:
                     row_cells.append(str(value))
             elif state['flagged'][r][c]:
-                row_cells.append('🚩')
+                # Flag link to unflag
+                issue_title = f"minesweeper|flag|{cell_name}"
+                issue_url = f"https://github.com/{repo_owner}/{repo_name}/issues/new?title={urllib.parse.quote(issue_title)}&body=Unflag+{cell_name}"
+                row_cells.append(f'[🚩]({issue_url})')
             else:
-                # Clickable link to workflow
-                workflow_url = f"https://github.com/{repo_owner}/{repo_name}/actions/workflows/main.yml"
-                row_cells.append(f'[▪]({workflow_url})')
+                # Reveal link
+                issue_title = f"minesweeper|reveal|{cell_name}"
+                issue_url = f"https://github.com/{repo_owner}/{repo_name}/issues/new?title={urllib.parse.quote(issue_title)}&body=Reveal+cell+{cell_name}"
+                row_cells.append(f'[▪]({issue_url})')
         lines.append('| ' + ' | '.join(row_cells) + ' |')
     
     lines.append('')
     lines.append(f'📊 **Moves:** {state["moves_count"]} | 💣 **Mines:** {state["mines_count"]} | 🚩 **Flags:** {sum(sum(row) for row in state["flagged"])}')
     lines.append('')
-    lines.append('> 💡 **How to play:** Go to [Actions](https://github.com/{}/{}/actions) → "Minesweeper Game" → "Run workflow" → Enter cell (e.g., A1)'.format(repo_owner, repo_name))
+    
+    # New game link
+    new_game_title = "minesweeper|new|game"
+    new_game_url = f"https://github.com/{repo_owner}/{repo_name}/issues/new?title={urllib.parse.quote(new_game_title)}&body=Start+a+new+game!"
+    lines.append(f'[🔄 New Game]({new_game_url})')
+    lines.append('')
+    lines.append('> 💡 **How to play:** Click a cell → Submit the issue → Board updates automatically!')
     lines.append('')
     lines.append('</div>')
     

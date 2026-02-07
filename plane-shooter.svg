@@ -129,7 +129,7 @@
   
   <!-- Score Text -->
   <text x="750" y="30" font-family="monospace" font-size="14" fill="#c0caf5" text-anchor="end">
-    SCORE: <tspan fill="#9ece6a">9999</tspan>
+    SCORE: <tspan fill="#9ece6a">4631</tspan>
   </text>
   
   <!-- Title -->

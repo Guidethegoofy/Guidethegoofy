@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200">
+  <defs>
+    <!-- Gradient for sky background -->
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1b26;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#24283b;stop-opacity:1"/>
+    </linearGradient>
+    
+    <!-- Glow effect for bullets -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Explosion effect -->
+    <radialGradient id="explosionGradient">
+      <stop offset="0%" style="stop-color:#ff9e64"/>
+      <stop offset="50%" style="stop-color:#f7768e"/>
+      <stop offset="100%" style="stop-color:transparent"/>
+    </radialGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="200" fill="url(#skyGradient)"/>
+  
+  <!-- Stars (static decoration) -->
+  <g fill="#565f89" opacity="0.6">
+    <circle cx="50" cy="30" r="1"/>
+    <circle cx="150" cy="60" r="0.8"/>
+    <circle cx="280" cy="25" r="1.2"/>
+    <circle cx="400" cy="45" r="0.9"/>
+    <circle cx="520" cy="20" r="1"/>
+    <circle cx="650" cy="55" r="0.7"/>
+    <circle cx="720" cy="35" r="1.1"/>
+    <circle cx="100" cy="80" r="0.6"/>
+    <circle cx="350" cy="70" r="0.8"/>
+    <circle cx="600" cy="75" r="1"/>
+  </g>
+  
+  <!-- Plane (Pixel Art Style) -->
+  <g id="plane">
+    <animateTransform attributeName="transform" type="translate" 
+      values="0,0; 0,-5; 0,5; 0,0" dur="2s" repeatCount="indefinite"/>
+    
+    <!-- Plane body -->
+    <polygon points="30,100 70,90 80,100 70,110" fill="#7aa2f7"/>
+    <!-- Cockpit -->
+    <polygon points="70,95 85,100 70,105" fill="#bb9af7"/>
+    <!-- Wing top -->
+    <polygon points="40,100 55,85 60,85 50,100" fill="#7dcfff"/>
+    <!-- Wing bottom -->
+    <polygon points="40,100 55,115 60,115 50,100" fill="#7dcfff"/>
+    <!-- Tail -->
+    <polygon points="30,95 25,85 30,100" fill="#7dcfff"/>
+    <polygon points="30,105 25,115 30,100" fill="#7dcfff"/>
+    <!-- Engine flame -->
+    <polygon points="30,97 15,100 30,103" fill="#ff9e64">
+      <animate attributeName="opacity" values="1;0.5;1" dur="0.2s" repeatCount="indefinite"/>
+    </polygon>
+  </g>
+  
+  <!-- Bullets -->
+  <g id="bullets" filter="url(#glow)">
+    <!-- Bullet 1 -->
+    <rect x="90" y="98" width="15" height="4" rx="2" fill="#9ece6a">
+      <animate attributeName="x" values="90;800" dur="1.5s" repeatCount="indefinite"/>
+    </rect>
+    <!-- Bullet 2 (delayed) -->
+    <rect x="90" y="98" width="15" height="4" rx="2" fill="#9ece6a">
+      <animate attributeName="x" values="90;800" dur="1.5s" begin="0.5s" repeatCount="indefinite"/>
+    </rect>
+    <!-- Bullet 3 (delayed) -->
+    <rect x="90" y="98" width="15" height="4" rx="2" fill="#9ece6a">
+      <animate attributeName="x" values="90;800" dur="1.5s" begin="1s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  
+  <!-- Target Blocks (Enemy blocks that get destroyed) -->
+  <g id="blocks">
+    <!-- Block 1 -->
+    <g>
+      <rect x="600" y="85" width="30" height="30" rx="4" fill="#f7768e">
+        <animate attributeName="opacity" values="1;1;0;0;1" dur="3s" repeatCount="indefinite" keyTimes="0;0.3;0.35;0.9;1"/>
+      </rect>
+      <!-- Explosion for Block 1 -->
+      <circle cx="615" cy="100" r="0" fill="url(#explosionGradient)">
+        <animate attributeName="r" values="0;0;25;0" dur="3s" repeatCount="indefinite" keyTimes="0;0.3;0.5;1"/>
+        <animate attributeName="opacity" values="0;0;1;0" dur="3s" repeatCount="indefinite" keyTimes="0;0.3;0.5;1"/>
+      </circle>
+    </g>
+    
+    <!-- Block 2 -->
+    <g>
+      <rect x="500" y="60" width="25" height="25" rx="4" fill="#e0af68">
+        <animate attributeName="opacity" values="1;1;0;0;1" dur="4s" begin="0.5s" repeatCount="indefinite" keyTimes="0;0.25;0.3;0.9;1"/>
+      </rect>
+      <circle cx="512" cy="72" r="0" fill="url(#explosionGradient)">
+        <animate attributeName="r" values="0;0;20;0" dur="4s" begin="0.5s" repeatCount="indefinite" keyTimes="0;0.25;0.45;1"/>
+        <animate attributeName="opacity" values="0;0;1;0" dur="4s" begin="0.5s" repeatCount="indefinite" keyTimes="0;0.25;0.45;1"/>
+      </circle>
+    </g>
+    
+    <!-- Block 3 -->
+    <g>
+      <rect x="700" y="110" width="35" height="35" rx="4" fill="#bb9af7">
+        <animate attributeName="opacity" values="1;1;0;0;1" dur="5s" begin="1s" repeatCount="indefinite" keyTimes="0;0.2;0.25;0.9;1"/>
+      </rect>
+      <circle cx="717" cy="127" r="0" fill="url(#explosionGradient)">
+        <animate attributeName="r" values="0;0;30;0" dur="5s" begin="1s" repeatCount="indefinite" keyTimes="0;0.2;0.4;1"/>
+        <animate attributeName="opacity" values="0;0;1;0" dur="5s" begin="1s" repeatCount="indefinite" keyTimes="0;0.2;0.4;1"/>
+      </circle>
+    </g>
+    
+    <!-- Block 4 -->
+    <g>
+      <rect x="450" y="130" width="20" height="20" rx="3" fill="#7dcfff">
+        <animate attributeName="opacity" values="1;1;0;0;1" dur="3.5s" begin="1.5s" repeatCount="indefinite" keyTimes="0;0.28;0.33;0.9;1"/>
+      </rect>
+      <circle cx="460" cy="140" r="0" fill="url(#explosionGradient)">
+        <animate attributeName="r" values="0;0;18;0" dur="3.5s" begin="1.5s" repeatCount="indefinite" keyTimes="0;0.28;0.48;1"/>
+        <animate attributeName="opacity" values="0;0;1;0" dur="3.5s" begin="1.5s" repeatCount="indefinite" keyTimes="0;0.28;0.48;1"/>
+      </circle>
+    </g>
+  </g>
+  
+  <!-- Score Text -->
+  <text x="750" y="30" font-family="monospace" font-size="14" fill="#c0caf5" text-anchor="end">
+    SCORE: <tspan fill="#9ece6a">9999</tspan>
+  </text>
+  
+  <!-- Title -->
+  <text x="400" y="185" font-family="monospace" font-size="12" fill="#565f89" text-anchor="middle">
+    ✈️ Plane Shooter | Guidethegoofy's Profile
+  </text>
+</svg>

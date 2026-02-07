@@ -1,7 +1,7 @@
 <div align="center">
-  <!-- Header Banner -->
-  <!-- Note: Upload your header image to docs/assets/header.png and uncomment the line below -->
-  <!-- <img src="docs/assets/header.png" width="100%" alt="Developer Cityscape Banner" /> -->
+  
+  <!-- Animated Plane Shooter Game -->
+  <img src="plane-shooter.svg" alt="Plane Shooter Animation" width="800"/>
   
   <h1>Hi there, I'm Guidethegoofy! <img src="https://media.giphy.com/media/hvRJCLFzcuMiQ/giphy.gif" width="30px"></h1>
   
@@ -10,13 +10,6 @@
   <p>
     Welcome to my digital playground. I build scalable applications, experiment with AI, and occasionally break production (for science).
   </p>
-
-  <!-- Interactive Mini-Game Section -->
-  <a href="https://guidethegoofy.github.io/Guidethegoofy/">
-    <img src="https://img.shields.io/badge/PLAY-COMMIT_CLICKER-2ea44f?style=for-the-badge&logo=github&labelColor=1b1f24" alt="Play Commit Clicker" />
-  </a>
-  <br/>
-  <sup>👆 Click the badge to play a mini-game I built directly for this profile!</sup>
 </div>
 
 <br/>
@@ -49,18 +42,15 @@
   <tr>
     <td width="60%">
       <ul>
-        <li>🔭 I’m currently working on <strong>[Project Name]</strong></li>
-        <li>🌱 I’m currently learning <strong>Advanced AI Agent Design</strong></li>
-        <li>👯 I’m looking to collaborate on <strong>Open Source Projects</strong></li>
+        <li>🔭 I'm currently working on <strong>[Project Name]</strong></li>
+        <li>🌱 I'm currently learning <strong>Advanced AI Agent Design</strong></li>
+        <li>👯 I'm looking to collaborate on <strong>Open Source Projects</strong></li>
         <li>💬 Ask me about <strong>Python, Web Dev, and Anime</strong></li>
         <li>📫 How to reach me: <strong>[Your Email]</strong></li>
-        <li>⚡ Fun fact: <strong>I coded a game inside this README (check the link above!)</strong></li>
+        <li>⚡ Fun fact: <strong>That plane shooter animation above? I made it!</strong></li>
       </ul>
     </td>
     <td width="40%" align="center">
-      <!-- Mascot Image -->
-      <!-- Note: Upload your mascot image to docs/assets/mascot.png and uncomment -->
-       <!-- <img src="docs/assets/mascot.png" width="150" alt="Anime Mascot" /> -->
        <img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" width="150" alt="Coding Cat" />
     </td>
   </tr>

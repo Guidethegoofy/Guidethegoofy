@@ -1,0 +1,49 @@
+name: Generate Plane Shooter Animation
+
+on:
+  # Run on push to main branch
+  push:
+    branches:
+      - main
+  # Run on schedule (every 12 hours)
+  schedule:
+    - cron: "0 */12 * * *"
+  # Allow manual trigger
+  workflow_dispatch:
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      # The SVG is static animation, so we just ensure it exists
+      # If you want dynamic content (like contribution-based), you'd add a script here
+      - name: Verify SVG exists
+        run: |
+          if [ -f "plane-shooter.svg" ]; then
+            echo "✅ plane-shooter.svg found!"
+          else
+            echo "❌ plane-shooter.svg not found!"
+            exit 1
+          fi
+
+      - name: Update timestamp in SVG (optional dynamic element)
+        run: |
+          # This adds a dynamic timestamp to make each regeneration unique
+          TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M UTC")
+          sed -i "s/SCORE: <tspan fill=\"#9ece6a\">[0-9]*<\/tspan>/SCORE: <tspan fill=\"#9ece6a\">$(shuf -i 1000-9999 -n 1)<\/tspan>/" plane-shooter.svg
+          echo "Updated score to random value at $TIMESTAMP"
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add plane-shooter.svg
+          git diff --staged --quiet || git commit -m "🎮 Update plane shooter animation"
+          git push

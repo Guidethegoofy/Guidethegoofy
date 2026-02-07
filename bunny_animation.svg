@@ -1,47 +1,172 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" preserveAspectRatio="xMidYMid meet">
   <defs>
+    <!-- Animated gradient background -->
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#87CEEB">
+        <animate attributeName="stop-color" values="#87CEEB;#FFB6C1;#DDA0DD;#87CEEB" dur="10s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="50%" style="stop-color:#E0BBE4">
+        <animate attributeName="stop-color" values="#E0BBE4;#FFDAB9;#98D8C8;#E0BBE4" dur="10s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" style="stop-color:#98D8C8">
+        <animate attributeName="stop-color" values="#98D8C8;#87CEEB;#FFB6C1;#98D8C8" dur="10s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    
+    <!-- Ground gradient -->
+    <linearGradient id="groundGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#90EE90"/>
+      <stop offset="100%" style="stop-color:#228B22"/>
+    </linearGradient>
+    
+    
     <style>
+      .background {
+        fill: url(#skyGradient);
+      }
+      
+      .ground {
+        fill: url(#groundGradient);
+      }
+      
       .container {
-        animation: run 8s infinite linear;
+        animation: run 10s infinite linear;
         transform-origin: center;
         transform-box: fill-box;
       }
       
       .bouncer {
-        animation: bounce 0.6s infinite ease-in-out alternate;
+        animation: bounce 0.4s infinite cubic-bezier(0.36, 0, 0.66, -0.56) alternate;
         transform-origin: bottom center;
         transform-box: fill-box;
       }
       
       .wobbler {
-        animation: wobble 2s infinite ease-in-out;
+        animation: wobble 1.5s infinite ease-in-out;
+        transform-origin: bottom center;
+        transform-box: fill-box;
+      }
+      
+      .squasher {
+        animation: squash 0.4s infinite ease-in-out alternate;
         transform-origin: bottom center;
         transform-box: fill-box;
       }
 
-      /* Move left to right and flip at edges */
+      /* Smoother run with easing */
       @keyframes run {
-        0% { transform: translateX(0) scaleX(1); }
-        45% { transform: translateX(450px) scaleX(1); }
-        50% { transform: translateX(450px) scaleX(-1); }
-        95% { transform: translateX(0) scaleX(-1); }
-        100% { transform: translateX(0) scaleX(1); }
+        0% { transform: translateX(-50px) scaleX(1); }
+        5% { transform: translateX(-50px) scaleX(1); }
+        45% { transform: translateX(500px) scaleX(1); }
+        50% { transform: translateX(500px) scaleX(-1); }
+        55% { transform: translateX(500px) scaleX(-1); }
+        95% { transform: translateX(-50px) scaleX(-1); }
+        100% { transform: translateX(-50px) scaleX(1); }
       }
 
-      /* Hopping up and down */
+      /* More dynamic hopping */
       @keyframes bounce {
         0% { transform: translateY(0); }
-        100% { transform: translateY(-20px); }
+        100% { transform: translateY(-35px); }
       }
 
-      /* Slight rotation for "life" */
+      /* More pronounced wobble */
       @keyframes wobble {
-        0% { transform: rotate(-5deg); }
-        50% { transform: rotate(5deg); }
-        100% { transform: rotate(-5deg); }
+        0% { transform: rotate(-8deg); }
+        25% { transform: rotate(0deg); }
+        50% { transform: rotate(8deg); }
+        75% { transform: rotate(0deg); }
+        100% { transform: rotate(-8deg); }
+      }
+      
+      /* Squash and stretch */
+      @keyframes squash {
+        0% { transform: scaleX(1.1) scaleY(0.9); }
+        100% { transform: scaleX(0.95) scaleY(1.05); }
+      }
+      
+      /* Floating clouds */
+      .cloud1 {
+        animation: floatCloud1 20s infinite linear;
+      }
+      .cloud2 {
+        animation: floatCloud2 25s infinite linear;
+      }
+      .cloud3 {
+        animation: floatCloud3 18s infinite linear;
+      }
+      
+      @keyframes floatCloud1 {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(800px); }
+      }
+      @keyframes floatCloud2 {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(800px); }
+      }
+      @keyframes floatCloud3 {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(800px); }
+      }
+      
+
+      
+      /* Floating hearts/stars trail */
+      .trail {
+        animation: trail 1s infinite ease-out;
+        opacity: 0;
+      }
+      
+      @keyframes trail {
+        0% { opacity: 0.8; transform: translateY(0) scale(1); }
+        100% { opacity: 0; transform: translateY(-30px) scale(0.3); }
       }
     </style>
   </defs>
+  
+  <!-- Background -->
+  <rect class="background" x="0" y="0" width="800" height="450"/>
+  
+  <!-- Clouds -->
+  <g class="cloud1" transform="translate(-200, 40)">
+    <ellipse cx="100" cy="50" rx="50" ry="30" fill="white" opacity="0.9"/>
+    <ellipse cx="130" cy="45" rx="40" ry="25" fill="white" opacity="0.9"/>
+    <ellipse cx="70" cy="55" rx="35" ry="20" fill="white" opacity="0.9"/>
+  </g>
+  <g class="cloud2" transform="translate(-400, 80)">
+    <ellipse cx="100" cy="50" rx="45" ry="25" fill="white" opacity="0.8"/>
+    <ellipse cx="125" cy="50" rx="35" ry="22" fill="white" opacity="0.8"/>
+  </g>
+  <g class="cloud3" transform="translate(-100, 30)">
+    <ellipse cx="100" cy="50" rx="55" ry="32" fill="white" opacity="0.85"/>
+    <ellipse cx="140" cy="48" rx="45" ry="28" fill="white" opacity="0.85"/>
+    <ellipse cx="60" cy="52" rx="40" ry="24" fill="white" opacity="0.85"/>
+  </g>
+  
+  <!-- Sun -->
+  <g transform="translate(680, 60)">
+    <circle cx="0" cy="0" r="40" fill="#FFD700" filter="url(#glow)">
+      <animate attributeName="r" values="38;42;38" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <g>
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="30s" repeatCount="indefinite"/>
+      <line x1="0" y1="-55" x2="0" y2="-65" stroke="#FFD700" stroke-width="3" stroke-linecap="round"/>
+      <line x1="0" y1="55" x2="0" y2="65" stroke="#FFD700" stroke-width="3" stroke-linecap="round"/>
+      <line x1="-55" y1="0" x2="-65" y2="0" stroke="#FFD700" stroke-width="3" stroke-linecap="round"/>
+      <line x1="55" y1="0" x2="65" y2="0" stroke="#FFD700" stroke-width="3" stroke-linecap="round"/>
+      <line x1="-40" y1="-40" x2="-47" y2="-47" stroke="#FFD700" stroke-width="3" stroke-linecap="round"/>
+      <line x1="40" y1="40" x2="47" y2="47" stroke="#FFD700" stroke-width="3" stroke-linecap="round"/>
+      <line x1="40" y1="-40" x2="47" y2="-47" stroke="#FFD700" stroke-width="3" stroke-linecap="round"/>
+      <line x1="-40" y1="40" x2="-47" y2="47" stroke="#FFD700" stroke-width="3" stroke-linecap="round"/>
+    </g>
+  </g>
+  
+  <!-- Ground with grass -->
+  <rect class="ground" x="0" y="380" width="800" height="70"/>
+  
+
+  
+  <!-- Group hierarchy for combining animations -->
   
   <!-- Group hierarchy for combining animations -->
   <g class="container">

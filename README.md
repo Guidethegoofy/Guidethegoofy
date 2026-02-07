@@ -1,10 +1,10 @@
 <div align="center">
 
-<!-- Animated Header - Cyberpunk Theme -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f0c29,50:302b63,100:24243e&height=180&section=header&text=Hi,%20I'm%20Guide%20👋&fontSize=42&fontColor=00FFFF&animation=twinkling&fontAlignY=32&desc=Computer%20Science%20Student%20@%20Burapha%20University&descSize=20&descAlignY=62&descColor=ffffff"/>
+<!-- Animated Header - Matrix Theme (Darker Green for contrast) -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,100:004400&height=180&section=header&text=Hi,%20I'm%20Guide%20👋&fontSize=42&fontColor=00FF00&animation=twinkling&fontAlignY=32"/>
 
-<!-- Typing Animation - Cyberpunk Cyan -->
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&pause=1000&color=00FFFF&center=true&vCenter=true&random=false&width=500&lines=>+AI+%26+Machine+Learning+;>+Web+Development+;>+Mobile+Development+;>+Always+Learning_)](https://git.io/typing-svg)
+<!-- Typing Animation - Matrix Green with Terminal Style -->
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&pause=1000&color=00FF00&background=000000&center=true&vCenter=true&random=false&width=500&lines=>+AI+%26+Machine+Learning+;>+Web+Development+;>+Mobile+Development+;>+Always+Learning_)](https://git.io/typing-svg)
 
 </div>
 
@@ -62,5 +62,5 @@ I enjoy learning the concepts behind various systems, whether it be AI, Web, or 
 
 </div>
 
-<!-- Footer Wave - Cyberpunk Theme -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f0c29,50:302b63,100:24243e&height=100&section=footer"/>
+<!-- Footer Wave - Matrix Theme -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,100:004400&height=100&section=footer"/>

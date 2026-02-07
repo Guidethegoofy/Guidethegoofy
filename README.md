@@ -54,36 +54,9 @@ const developer = {
 
 ---
 
-## 📊 GitHub Stats
-
 <div align="center">
 
-<a href="https://github.com/Guidethegoofy">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=Guidethegoofy&show_icons=true&theme=tokyonight&hide_border=true&bg_color=1a1b26&title_color=7aa2f7&icon_color=9ece6a&text_color=c0caf5&count_private=true"/>
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Guidethegoofy&layout=compact&theme=tokyonight&hide_border=true&bg_color=1a1b26&title_color=7aa2f7&text_color=c0caf5"/>
-</a>
-
-<br/>
-
-<a href="https://github.com/Guidethegoofy">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Guidethegoofy&theme=tokyonight&hide_border=true&background=1a1b26&stroke=414868&ring=7aa2f7&fire=f7768e&currStreakLabel=c0caf5"/>
-</a>
-
-</div>
-
----
-
-## 💬 Random Dev Quote
-
-<div align="center">
-
-[![Readme Quotes](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight)](https://github.com/piyushsuthar/github-readme-quotes)
-
-</div>
-
----
-
-<div align="center">
+### � Profile Views
 
 ![Profile Views](https://komarev.com/ghpvc/?username=Guidethegoofy&color=7aa2f7&style=for-the-badge&label=PROFILE+VIEWS)
 

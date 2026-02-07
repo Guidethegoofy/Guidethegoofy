@@ -85,8 +85,6 @@ const developer = {
 
 <div align="center">
 
-### 👀 Profile Views
-
 ![Profile Views](https://komarev.com/ghpvc/?username=Guidethegoofy&color=7aa2f7&style=for-the-badge&label=PROFILE+VIEWS)
 
 </div>

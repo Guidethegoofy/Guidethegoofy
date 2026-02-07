@@ -19,6 +19,8 @@ I enjoy learning the concepts behind various systems, whether it be AI, Web, or 
 
 🔭 Currently developing skills in **Machine Learning, NLP, and Full-Stack Development**
 
+Most of my current work is kept private as I focus on structured learning and experimentation.
+
 ![AI](https://img.shields.io/badge/AI-10a37f?style=for-the-badge&logo=openai&logoColor=white)
 ![Machine Learning](https://img.shields.io/badge/ML-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
 ![Web](https://img.shields.io/badge/Web-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white)

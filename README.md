@@ -79,6 +79,3 @@
   <!-- Animated Bunny Mascot -->
   <img src="bunny_animation.svg" width="100%" alt="Bunny Mascot"/>
 </div>
-
-<!-- Footer Wave - Matrix Theme -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,100:003300&height=100&section=footer"/>

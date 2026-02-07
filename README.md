@@ -1,10 +1,10 @@
 <div align="center">
 
-<!-- Animated Header -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=180&section=header&text=Hi,%20I'm%20Guide%20👋&fontSize=42&fontColor=fff&animation=twinkling&fontAlignY=32&desc=Computer%20Science%20Student%20@%20Burapha%20University&descSize=18&descAlignY=52"/>
+<!-- Animated Header - Matrix Theme -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,100:00FF00&height=180&section=header&text=Hi,%20I'm%20Guide%20👋&fontSize=42&fontColor=00FF00&animation=twinkling&fontAlignY=32&desc=Computer%20Science%20Student%20@%20Burapha%20University&descSize=18&descAlignY=52"/>
 
-<!-- Typing Animation -->
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&pause=1000&color=7AA2F7&center=true&vCenter=true&random=false&width=500&lines=AI+%26+Machine+Learning+🤖;Web+Development+🌐;Mobile+Development+📱;Always+Learning+📚)](https://git.io/typing-svg)
+<!-- Typing Animation - Matrix Green -->
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&pause=1000&color=00FF00&center=true&vCenter=true&random=false&width=500&lines=AI+%26+Machine+Learning+🤖;Web+Development+🌐;Mobile+Development+📱;Always+Learning+📚)](https://git.io/typing-svg)
 
 </div>
 
@@ -12,28 +12,28 @@
 
 ## 👨‍💻 About Me
 
-<div align="center">
-
-| | |
-|:-:|:--|
-| 🎓 | **นักศึกษาชั้นปีที่ 3** สาขาวิทยาการคอมพิวเตอร์ |
-| 🏛️ | มหาวิทยาลัยบูรพา |
-| 🌏 | Thailand 🇹🇭 |
-
-</div>
-
----
-
-## 🚀 Interests
-
-<div align="center">
-
-![AI](https://img.shields.io/badge/AI-FF6F61?style=for-the-badge&logo=openai&logoColor=white)
-![Machine Learning](https://img.shields.io/badge/Machine%20Learning-00C853?style=for-the-badge&logo=tensorflow&logoColor=white)
-![Web Development](https://img.shields.io/badge/Web%20Dev-7AA2F7?style=for-the-badge&logo=googlechrome&logoColor=white)
-![Mobile Development](https://img.shields.io/badge/Mobile%20Dev-BB9AF7?style=for-the-badge&logo=android&logoColor=white)
-
-</div>
+<table align="center">
+  <tr>
+    <td align="center" width="50%">
+      <h3>🎓 Education</h3>
+      <p><b>วิทยาการคอมพิวเตอร์</b></p>
+      <p>นักศึกษาชั้นปีที่ 3</p>
+      <p>🏛️ มหาวิทยาลัยบูรพา</p>
+      <p>🇹🇭 Thailand</p>
+    </td>
+    <td align="center" width="50%">
+      <h3>🚀 Interests</h3>
+      <p>
+        <img src="https://img.shields.io/badge/AI-FF6F61?style=flat-square&logo=openai&logoColor=white"/>
+        <img src="https://img.shields.io/badge/ML-00C853?style=flat-square&logo=tensorflow&logoColor=white"/>
+      </p>
+      <p>
+        <img src="https://img.shields.io/badge/Web-7AA2F7?style=flat-square&logo=googlechrome&logoColor=white"/>
+        <img src="https://img.shields.io/badge/Mobile-BB9AF7?style=flat-square&logo=android&logoColor=white"/>
+      </p>
+    </td>
+  </tr>
+</table>
 
 ---
 
@@ -66,9 +66,9 @@
 
 <div align="center">
 
-![Profile Views](https://komarev.com/ghpvc/?username=Guidethegoofy&color=7aa2f7&style=for-the-badge&label=PROFILE+VIEWS)
+![Profile Views](https://komarev.com/ghpvc/?username=Guidethegoofy&color=00FF00&style=for-the-badge&label=PROFILE+VIEWS)
 
 </div>
 
-<!-- Footer Wave -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=100&section=footer"/>
+<!-- Footer Wave - Matrix Theme -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,100:00FF00&height=100&section=footer"/>

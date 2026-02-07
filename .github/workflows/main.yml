@@ -1,21 +1,28 @@
-name: Generate Plane Shooter Animation
+name: Minesweeper Game
 
 on:
-  # Run on push to main branch
-  push:
-    branches:
-      - main
-  # Run on schedule (every 12 hours)
-  schedule:
-    - cron: "0 */12 * * *"
-  # Allow manual trigger
+  # Allow manual trigger with cell input
   workflow_dispatch:
+    inputs:
+      cell:
+        description: 'Cell to reveal (e.g., A1, B3, C5)'
+        required: true
+        type: string
+      action:
+        description: 'Action to perform'
+        required: true
+        default: 'reveal'
+        type: choice
+        options:
+          - reveal
+          - flag
+          - new
 
 permissions:
   contents: write
 
 jobs:
-  generate:
+  play:
     runs-on: ubuntu-latest
     timeout-minutes: 5
 
@@ -25,28 +32,56 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      # The SVG is static animation, so we just ensure it exists
-      # If you want dynamic content (like contribution-based), you'd add a script here
-      - name: Verify SVG exists
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run Minesweeper
         run: |
-          if [ -f "plane-shooter.svg" ]; then
-            echo "✅ plane-shooter.svg found!"
+          if [ "${{ github.event.inputs.action }}" == "new" ]; then
+            python scripts/minesweeper.py new
           else
-            echo "❌ plane-shooter.svg not found!"
-            exit 1
+            python scripts/minesweeper.py ${{ github.event.inputs.action }} ${{ github.event.inputs.cell }}
           fi
 
-      - name: Update timestamp in SVG (optional dynamic element)
+      - name: Update README with game board
         run: |
-          # This adds a dynamic timestamp to make each regeneration unique
-          TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M UTC")
-          sed -i "s/SCORE: <tspan fill=\"#9ece6a\">[0-9]*<\/tspan>/SCORE: <tspan fill=\"#9ece6a\">$(shuf -i 1000-9999 -n 1)<\/tspan>/" plane-shooter.svg
-          echo "Updated score to random value at $TIMESTAMP"
+          # Read the generated MINESWEEPER.md and insert into README.md
+          # Find and replace the minesweeper section
+          python << 'EOF'
+import re
+
+# Read files
+with open('MINESWEEPER.md', 'r', encoding='utf-8') as f:
+    minesweeper_content = f.read()
+
+with open('README.md', 'r', encoding='utf-8') as f:
+    readme_content = f.read()
+
+# Pattern to find existing minesweeper section
+pattern = r'<!-- MINESWEEPER:START -->.*?<!-- MINESWEEPER:END -->'
+replacement = f'<!-- MINESWEEPER:START -->\n{minesweeper_content}\n<!-- MINESWEEPER:END -->'
+
+if '<!-- MINESWEEPER:START -->' in readme_content:
+    # Replace existing section
+    new_readme = re.sub(pattern, replacement, readme_content, flags=re.DOTALL)
+else:
+    # Add section after the header
+    # Find the first </div> and insert after it
+    insert_pos = readme_content.find('</div>') + len('</div>')
+    new_readme = readme_content[:insert_pos] + '\n\n' + replacement + '\n' + readme_content[insert_pos:]
+
+with open('README.md', 'w', encoding='utf-8') as f:
+    f.write(new_readme)
+
+print("✅ README.md updated with game board")
+EOF
 
       - name: Commit and push changes
         run: |
           git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add plane-shooter.svg
-          git diff --staged --quiet || git commit -m "🎮 Update plane shooter animation"
+          git config --local user.name "Minesweeper Bot 🎮"
+          git add game_state.json minesweeper.svg MINESWEEPER.md README.md
+          git diff --staged --quiet || git commit -m "🎮 Minesweeper: ${{ github.event.inputs.action }} ${{ github.event.inputs.cell }}"
           git push

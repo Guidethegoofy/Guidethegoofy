@@ -1,25 +1,30 @@
 <div align="center">
 
-<!-- Animated Header - Soft Green Theme -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:1a4731,100:2d5a3f&height=180&section=header&text=Hi,%20I'm%20Guide%20👋&fontSize=42&fontColor=58a6ff&animation=twinkling&fontAlignY=32&desc=Computer%20Science%20Student%20@%20Burapha%20University&descSize=16&descAlignY=52&descColor=8b949e"/>
+<!-- Animated Header - Matrix Theme (Darker Green for contrast) -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,100:004400&height=180&section=header&text=Hi,%20I'm%20Guide%20👋&fontSize=42&fontColor=00FF00&animation=twinkling&fontAlignY=32&desc=Computer%20Science%20Student%20@%20Burapha%20University&descSize=20&descAlignY=62&descColor=ffffff"/>
 
-<!-- Typing Animation -->
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=22&pause=1000&color=58A6FF&center=true&vCenter=true&random=false&width=450&lines=AI+%26+Machine+Learning;Web+Development;Mobile+Development;Always+Learning)](https://git.io/typing-svg)
+<!-- Typing Animation - Matrix Green with Terminal Style -->
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&pause=1000&color=00FF00&center=true&vCenter=true&random=false&width=500&lines=>+AI+%26+Machine+Learning+;>+Web+Development+;>+Mobile+Development+;>+Always+Learning_)](https://git.io/typing-svg)
 
 </div>
 
----
-
 ## 👨‍💻 About Me
 
-> 🎓 **นักศึกษาชั้นปีที่ 3** สาขาวิทยาการคอมพิวเตอร์  
-> 🏛️ มหาวิทยาลัยบูรพา  
-> 📍 Thailand
+<div align="center">
 
-**สนใจเรื่อง:**  
-`🤖 AI` `🧠 Machine Learning` `🌐 Web Development` `📱 Mobile Development`
+🎓 **Computer Science Student** @ Burapha University | 🇹🇭 Thailand
 
----
+A Computer Science student passionate about developing practical technologies.  
+I enjoy learning the concepts behind various systems, whether it be AI, Web, or Backend.
+
+🔭 Currently developing skills in **Machine Learning, NLP, and Full-Stack Development**
+
+![AI](https://img.shields.io/badge/AI-10a37f?style=for-the-badge&logo=openai&logoColor=white)
+![Machine Learning](https://img.shields.io/badge/ML-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
+![Web](https://img.shields.io/badge/Web-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white)
+![Mobile](https://img.shields.io/badge/Mobile-3DDC84?style=for-the-badge&logo=android&logoColor=white)
+
+</div>
 
 ## 🛠️ Tech Stack
 
@@ -46,13 +51,12 @@
 
 </div>
 
----
 
 <div align="center">
 
-![Profile Views](https://komarev.com/ghpvc/?username=Guidethegoofy&color=2d5a3f&style=flat-square&label=Views)
+![Profile Views](https://komarev.com/ghpvc/?username=Guidethegoofy&color=4B0082&style=for-the-badge&label=PROFILE+VIEWS)
 
 </div>
 
-<!-- Footer Wave -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:1a4731,100:2d5a3f&height=100&section=footer"/>
+<!-- Footer Wave - Matrix Theme -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,100:004400&height=100&section=footer"/>

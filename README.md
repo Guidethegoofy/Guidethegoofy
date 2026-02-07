@@ -58,42 +58,24 @@ const developer = {
 
 <div align="center">
 
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=Guidethegoofy&show_icons=true&theme=tokyonight&hide_border=true&bg_color=1a1b26&title_color=7aa2f7&icon_color=9ece6a&text_color=c0caf5"/>
-<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Guidethegoofy&layout=compact&theme=tokyonight&hide_border=true&bg_color=1a1b26&title_color=7aa2f7&text_color=c0caf5"/>
+<a href="https://github.com/Guidethegoofy">
+  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=Guidethegoofy&show_icons=true&theme=tokyonight&hide_border=true&bg_color=1a1b26&title_color=7aa2f7&icon_color=9ece6a&text_color=c0caf5&count_private=true"/>
+  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Guidethegoofy&layout=compact&theme=tokyonight&hide_border=true&bg_color=1a1b26&title_color=7aa2f7&text_color=c0caf5"/>
+</a>
 
-</div>
+<br/>
 
-<div align="center">
-
-[![GitHub Streak](https://streak-stats.demolab.com?user=Guidethegoofy&theme=tokyonight&hide_border=true&background=1a1b26&stroke=414868&ring=7aa2f7&fire=f7768e&currStreakLabel=c0caf5)](https://git.io/streak-stats)
-
-</div>
-
----
-
-## � GitHub Trophies
-
-<div align="center">
-
-[![trophy](https://github-profile-trophy.vercel.app/?username=Guidethegoofy&theme=tokyonight&no-frame=true&no-bg=true&margin-w=4&row=1)](https://github.com/ryo-ma/github-profile-trophy)
+<a href="https://github.com/Guidethegoofy">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Guidethegoofy&theme=tokyonight&hide_border=true&background=1a1b26&stroke=414868&ring=7aa2f7&fire=f7768e&currStreakLabel=c0caf5"/>
+</a>
 
 </div>
 
 ---
 
-## 🐍 Contribution Snake
+## 💬 Random Dev Quote
 
 <div align="center">
-
-![Snake animation](https://raw.githubusercontent.com/Guidethegoofy/Guidethegoofy/output/github-contribution-grid-snake-dark.svg)
-
-</div>
-
----
-
-<div align="center">
-
-### 💬 Random Dev Quote
 
 [![Readme Quotes](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight)](https://github.com/piyushsuthar/github-readme-quotes)
 

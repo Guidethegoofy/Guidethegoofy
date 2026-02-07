@@ -1,10 +1,10 @@
 <div align="center">
 
 <!-- Animated Header -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=180&section=header&text=Hey%20there!%20👋&fontSize=42&fontColor=fff&animation=twinkling&fontAlignY=32&desc=I'm%20a%20passionate%20developer&descSize=18&descAlignY=52"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=180&section=header&text=Hi,%20I'm%20Guide%20👋&fontSize=42&fontColor=fff&animation=twinkling&fontAlignY=32&desc=Computer%20Science%20Student%20@%20Burapha%20University&descSize=18&descAlignY=52"/>
 
 <!-- Typing Animation -->
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=28&pause=1000&color=7AA2F7&center=true&vCenter=true&random=false&width=600&lines=Full+Stack+Developer+🚀;Building+Cool+Stuff+💻;Always+Learning+📚;Open+Source+Enthusiast+🌟)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&pause=1000&color=7AA2F7&center=true&vCenter=true&random=false&width=500&lines=AI+%26+Machine+Learning+🤖;Web+Development+🌐;Mobile+Development+📱;Always+Learning+📚)](https://git.io/typing-svg)
 
 </div>
 
@@ -12,18 +12,28 @@
 
 ## 👨‍💻 About Me
 
-```javascript
-const developer = {
-    name: "Guidethegoofy",
-    location: "Thailand 🇹🇭",
-    currentFocus: "Building awesome web applications",
-    funFact: "I debug with console.log and I'm proud of it 😎",
-    
-    contact: {
-        github: "@Guidethegoofy",
-    }
-};
-```
+<div align="center">
+
+| | |
+|:-:|:--|
+| 🎓 | **นักศึกษาชั้นปีที่ 3** สาขาวิทยาการคอมพิวเตอร์ |
+| 🏛️ | มหาวิทยาลัยบูรพา |
+| 🌏 | Thailand 🇹🇭 |
+
+</div>
+
+---
+
+## 🚀 Interests
+
+<div align="center">
+
+![AI](https://img.shields.io/badge/AI-FF6F61?style=for-the-badge&logo=openai&logoColor=white)
+![Machine Learning](https://img.shields.io/badge/Machine%20Learning-00C853?style=for-the-badge&logo=tensorflow&logoColor=white)
+![Web Development](https://img.shields.io/badge/Web%20Dev-7AA2F7?style=for-the-badge&logo=googlechrome&logoColor=white)
+![Mobile Development](https://img.shields.io/badge/Mobile%20Dev-BB9AF7?style=for-the-badge&logo=android&logoColor=white)
+
+</div>
 
 ---
 
@@ -55,8 +65,6 @@ const developer = {
 ---
 
 <div align="center">
-
-### � Profile Views
 
 ![Profile Views](https://komarev.com/ghpvc/?username=Guidethegoofy&color=7aa2f7&style=for-the-badge&label=PROFILE+VIEWS)
 

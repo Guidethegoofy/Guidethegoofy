@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commit Clicker</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Commit Clicker</h1>
+            <p class="subtitle">Push code, break prod, get stars.</p>
+        </header>
+
+        <main>
+            <div class="stats-panel">
+                <div class="stat-box">
+                    <span class="label">Total Commits</span>
+                    <span id="commits" class="value">0</span>
+                </div>
+                <div class="stat-box">
+                    <span class="label">Commits/sec</span>
+                    <span id="cps" class="value">0</span>
+                </div>
+            </div>
+
+            <div class="click-area">
+                <button id="commit-btn" class="main-btn">
+                    <span class="icon">💻</span>
+                    Git Push
+                </button>
+            </div>
+
+            <div class="upgrades-panel">
+                <h2>Upgrades</h2>
+                <div id="upgrades-list" class="upgrades-grid">
+                    <!-- Upgrades injected by JS -->
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

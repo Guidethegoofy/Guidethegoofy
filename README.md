@@ -11,16 +11,15 @@
 <h3 align="center">👨‍💻 About Me</h3>
 
 <div align="center">
+Computer Science Student @ Burapha University | Thailand
 
-# 🎓 Computer Science Student @ Burapha University | Thailand
+A Computer Science student passionate about developing practical technologies.
 
-### A Computer Science student passionate about developing practical technologies.
+I enjoy learning the concepts behind various systems, whether it be AI, Web, or Backend.
 
-### I enjoy learning the concepts behind various systems, whether it be AI, Web, or Backend.
+🔭 Currently developing skills in Machine Learning, NLP, and Full-Stack Development
 
-## 🔭 Currently developing skills in Machine Learning, NLP, and Full-Stack Development
-
-### Most of my current work is kept private as I focus on structured learning and experimentation.
+Most of my current work is kept private as I focus on structured learning and experimentation.
 
 <br>
 

@@ -11,15 +11,16 @@
 <h3 align="center">👨‍💻 About Me</h3>
 
 <div align="center">
-Computer Science Student @ Burapha University | Thailand
 
-A Computer Science student passionate about developing practical technologies.
+**Computer Science Student @ Burapha University | Thailand**
 
-I enjoy learning the concepts behind various systems, whether it be AI, Web, or Backend.
+**A Computer Science student passionate about developing practical technologies.**
 
-🔭 Currently developing skills in Machine Learning, NLP, and Full-Stack Development
+**I enjoy learning the concepts behind various systems, whether it be AI, Web, or Backend.**
 
-Most of my current work is kept private as I focus on structured learning and experimentation.
+**🔭 Currently developing skills in Machine Learning, NLP, and Full-Stack Development**
+
+**Most of my current work is kept private as I focus on structured learning and experimentation.**
 
 <br>
 
@@ -34,14 +35,14 @@ Most of my current work is kept private as I focus on structured learning and ex
 
 <div align="center">
 
-### Languages
+**Languages**
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
-### Frameworks & Libraries
+**Frameworks & Libraries**
 
 ![Vue.js](https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D)
 ![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
@@ -49,19 +50,19 @@ Most of my current work is kept private as I focus on structured learning and ex
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
 ![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-FFD21E?style=for-the-badge&logoColor=black)
 
-### Runtimes & Build Tools
+**Runtimes & Build Tools**
 
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
 ![Bun](https://img.shields.io/badge/Bun-%23fbf0df?style=for-the-badge&logo=bun&logoColor=black)
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
 
-### Cloud & DevOps
+**Cloud & DevOps**
 
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)
 ![Render](https://img.shields.io/badge/Render-%2346E3B7.svg?style=for-the-badge&logo=render&logoColor=white)
 
-### Tools & Version Control
+**Tools & Version Control**
 
 ![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)

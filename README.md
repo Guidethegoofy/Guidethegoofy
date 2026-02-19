@@ -81,6 +81,6 @@
 
 <div align="center">
   <br/>
-  <!-- Animated Bunny Mascot -->
-  <img src="bunny_animation.svg" width="100%" alt="Bunny Mascot"/>
+  <p>This is <strong>Yuchan</strong>, one of my personal AI assistants.</p>
+  <img src="yuchan_idle.svg" height="300" alt="Yuchan Mascot"/>
 </div>

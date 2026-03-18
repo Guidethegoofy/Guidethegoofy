@@ -1,0 +1,36 @@
+name: Update README cards
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate stats card
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: stats
+          options: username=${{ github.repository_owner }}&hide=contribs&show_icons=true&bg_color=2B2D3D&rank_icon=github&title_color=F4A7C3&text_color=B8D4F0&icon_color=C4A8D4&ring_color=E8B4D8&border_color=6B8FD4&include_all_commits=true&count_private=true
+          path: profile/stats.svg
+          token: ${{ secrets.GH_STATS_TOKEN }}
+
+      - name: Generate top languages card
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: top-langs
+          options: username=${{ github.repository_owner }}&layout=compact&langs_count=8&bg_color=2B2D3D&title_color=F4A7C3&text_color=B8D4F0&icon_color=C4A8D4&border_color=6B8FD4
+          path: profile/top-langs.svg
+          token: ${{ secrets.GH_STATS_TOKEN }}
+
+      - name: Commit cards
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add profile/
+          git diff --staged --quiet || git commit -m "Update stats cards"
+          git push

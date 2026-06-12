@@ -18,7 +18,7 @@
 
 **I enjoy learning the concepts behind various systems, whether it be AI, Web, or Backend.**
 
-**🔭 Currently developing skills in Machine Learning, NLP, and Full-Stack Development**
+**🔭 Currently developing skills in Machine Learning, NLP, Agentic AI, and Full-Stack Development (including Web/Desktop Automation)**
 
 **Most of my current work is kept private as I focus on structured learning and experimentation.**
 
@@ -49,11 +49,15 @@
 
 **Frameworks & Libraries**
 
-![Vue.js](https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D)
 ![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)
+![Vue.js](https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
+![Zustand](https://img.shields.io/badge/Zustand-443E38?style=for-the-badge)
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
+![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white)
 ![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-FFD21E?style=for-the-badge&logoColor=black)
+![CustomTkinter](https://img.shields.io/badge/CustomTkinter-2C2C2C?style=for-the-badge)
 
 **Runtimes & Build Tools**
 
@@ -66,6 +70,7 @@
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-00758F?style=for-the-badge&logo=mysql&logoColor=white)
 ![SQLite](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)
+![Qdrant](https://img.shields.io/badge/Qdrant-C53434?style=for-the-badge&logo=qdrant&logoColor=white)
 
 **Cloud & DevOps**
 
